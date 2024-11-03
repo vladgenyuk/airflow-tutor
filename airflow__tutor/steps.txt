@@ -1,0 +1,7 @@
+airflow users create \
+    --username airflow \
+    --firstname Admin \
+    --lastname User \
+    --role Admin \
+    --email admin@example.com \
+    --password airflow
