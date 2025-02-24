@@ -5,3 +5,19 @@ airflow users create \
     --role Admin \
     --email admin@example.com \
     --password airflow
+
+
+
+
+sudo chown 50000:0 dags logs plugins
+
+docker run -d \
+  --name postgres \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_DB=postgres \
+  -p 5433:5432 \
+  postgres:latest
+
+
+psql -U postgres -p 5433 -h localhost
